@@ -1,0 +1,29 @@
+[package]
+authors = ['Doug Stephen <dljs.jr@dougstephenjr.com']
+edition = '2021'
+license = 'Apache-2.0'
+name = 'undump-aya'
+publish = false
+version = '0.1.0'
+
+[[bin]]
+name = 'undump-aya'
+path = 'src/main.rs'
+
+[dependencies]
+anyhow = '1'
+aya = '0.12'
+aya-log = '0.2'
+bytes = '1.7.1'
+chrono = '0.4.38'
+env_logger = '0.11.5'
+libc = '0.2'
+log = '0.4'
+
+[dependencies.tokio]
+features = ['macros', 'rt', 'rt-multi-thread', 'net', 'signal']
+version = '1.25'
+
+[dependencies.undump-aya-common]
+features = ['user']
+path = '../undump-aya-common'

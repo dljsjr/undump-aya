@@ -1,0 +1,13 @@
+[package]
+authors = ['Doug Stephen <dljs.jr@dougstephenjr.com']
+edition = '2021'
+license = 'Apache-2.0'
+name = 'xtask'
+version = '0.1.0'
+
+[dependencies]
+anyhow = '1'
+
+[dependencies.clap]
+features = ['derive']
+version = '4.1'

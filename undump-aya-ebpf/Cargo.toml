@@ -1,0 +1,36 @@
+[package]
+authors = ['Doug Stephen <dljs.jr@dougstephenjr.com']
+edition = '2021'
+license = 'Apache-2.0'
+name = 'undump-aya-ebpf'
+version = '0.1.0'
+
+[[bin]]
+name = 'undump-aya'
+path = 'src/main.rs'
+
+[dependencies]
+aya-ebpf = '0.1.0'
+aya-log-ebpf = '0.1.0'
+
+[dependencies.undump-aya-common]
+path = '../undump-aya-common'
+
+[profile.dev]
+codegen-units = 1
+debug = false
+debug-assertions = false
+incremental = false
+lto = true
+opt-level = 3
+overflow-checks = false
+panic = 'abort'
+rpath = false
+
+[profile.release]
+codegen-units = 1
+lto = true
+panic = 'abort'
+
+[workspace]
+members = []
