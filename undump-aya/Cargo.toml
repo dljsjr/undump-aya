@@ -22,7 +22,7 @@ log = '0.4'
 
 [dependencies.tokio]
 features = ['macros', 'rt', 'rt-multi-thread', 'net', 'signal']
-version = '1.25'
+version = '1.43'
 
 [dependencies.undump-aya-common]
 features = ['user']
